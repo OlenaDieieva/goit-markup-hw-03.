@@ -56,6 +56,12 @@ p {
     margin-bottom: 0px;
 }
 
+.site-nav.list .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 a {
     text-decoration: none;
 }
@@ -75,19 +81,22 @@ ul {
 
 /* Логотип */
 .header {
-    display: flex;
+
     justify-content: center;
     align-items: center;
     background-color: var(--white);
 }
 
 .logo {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: var(--secondary-title-text-color);
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
-    color: var(--secondary-title-text-color);
 }
 
 .logo-accent {
@@ -128,12 +137,23 @@ li {
     color: var(--accent-color);
 }
 
+.contact.list .email {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
+.contact.list .tel {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+
 .email {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    margin-bottom: 32px;
     color: var(--title-text-color);
 }
 
@@ -142,7 +162,6 @@ li {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    margin-bottom: 32px;
     color: var(--title-text-color);
 }
 
@@ -228,6 +247,7 @@ li {
     text-align: center;
     padding: 6px, 22px;
     margin-right: 8px;
+    margin-bottom: 34px;
     border: 1px solid transparent;
     color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
@@ -340,6 +360,10 @@ li {
     line-height: 2.0;
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
+}
+
+.galery-list .li {
+    margin-right: 30 px;
 }
 
 .example-work {
