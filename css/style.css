@@ -51,14 +51,11 @@ p {
     margin-bottom: 0px;
 }
 
-.site-nav-list {
+.site-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 a {
@@ -84,14 +81,13 @@ header.container {
     justify-content: space-between;
 }
 
-nav.nav {
+.nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    display: block;
     margin-right: 93px;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -107,15 +103,15 @@ nav.nav {
     color: var(--accent-color);
 }
 
-.li .link.current {
-    margin-right: 50px;
-}
-
 li {
     outline: 1px solid red;
 }
 
 .link.current {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 50px;
     outline: 1px, solid, red;
     color: var(--accent-color);
 }
@@ -126,6 +122,9 @@ li {
 }
 
 .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
     outline: 1px, solid, var(--accent-color);
     font-weight: 500;
     font-size: 14px;
@@ -141,7 +140,9 @@ li {
     color: var(--accent-color);
 }
 
-nav.contact.list {
+.contact list {}
+
+ul.contact.list {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -149,14 +150,12 @@ nav.contact.list {
 }
 
 .contact.list .email {
-    display: block;
     width: 135px;
     padding-top: 32px;
     padding-bottom: 32px;
 }
 
 .contact.list .tel {
-    display: block;
     width: 135px;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -231,11 +230,9 @@ nav.contact.list {
 .galery .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .button {
-    display: inline-block;
     color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
     border-radius: 4px;
@@ -244,6 +241,8 @@ nav.contact.list {
 }
 
 .button.primary {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
@@ -262,6 +261,8 @@ nav.contact.list {
 }
 
 .btn-group .button {
+    display: flex;
+    align-items: center;
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
@@ -276,7 +277,7 @@ nav.contact.list {
     background-color: var(--secondary-background-color);
 }
 
-.btn-group .button:not(:last-child) {
+.btn-group:nth-last-child(3) {
     margin-right: 0px;
 }
 
@@ -296,12 +297,6 @@ nav.contact.list {
     justify-content: space-between;
 }
 
-.features-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -316,8 +311,12 @@ nav.contact.list {
 }
 
 .features-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding-top: 94px;
     padding-bottom: 94px;
+    gap: 30px;
 }
 
 .features-title {
@@ -328,7 +327,6 @@ nav.contact.list {
     text-align: center;
     text-transform: uppercase;
     margin-top: 0px;
-
     color: var(--primary-text-color);
 }
 
@@ -345,10 +343,6 @@ nav.contact.list {
     margin-right: 30px;
 }
 
-.item {
-    display: block;
-}
-
 .item:not(:last child) {
     margin-right: 30px;
 }
@@ -360,10 +354,11 @@ nav.contact.list {
     justify-content: space-between;
 }
 
-. work-list {
+.work-list {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
 }
 
 .section.work {
@@ -386,10 +381,13 @@ nav.contact.list {
 }
 
 .work-title {
+    display: flex;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 50px;
     color: var(--primary-text-color);
 }
@@ -397,13 +395,15 @@ nav.contact.list {
 .team-list {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 30px;
+
 }
 
 .team-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 270px;
     background-color: var(--white);
 }
 
@@ -415,6 +415,16 @@ nav.contact.list {
     color: var(--primary-text-color);
 }
 
+/* Галерея */
+
+.galery.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-left: auto;
+}
+
 .vocation {
     font-weight: 400;
     font-size: 16px;
@@ -424,7 +434,7 @@ nav.contact.list {
 }
 
 .galery-title-hidden {
-    display: none
+    display: none;
 }
 
 .galery-title {
@@ -435,8 +445,23 @@ nav.contact.list {
     color: var(--primary-text-color);
 }
 
-.galery-list .li {
-    margin-right: 30 px;
+.galery-item {
+    width: 370px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.galery-item:nth-child(3) {
+    margin-right: 0px;
+}
+
+.galery-item:nth-last-child(3) {
+    margin-bottom: 0px;
+}
+
+.galery-list {
+    display: flex;
+    flex-wrap: wrap
 }
 
 .example-work {
