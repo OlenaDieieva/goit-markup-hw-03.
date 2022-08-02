@@ -335,7 +335,7 @@ li {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.7;
-    text-align: center;
+    text-align: start;
     margin-top: 0px;
     color: var(--title-text-color);
 }
@@ -368,11 +368,14 @@ li {
 }
 
 .section-team {
-    margin-bottom: 0px;
+    padding-top: 185px;
+    padding-bottom: 94px;
     background-color: var(--secondary-background-color);
 }
 
 .section-title {
+    padding-top: 94px;
+    padding-bottom: 49px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -397,10 +400,11 @@ li {
     display: flex;
     align-items: center;
     gap: 30px;
-
 }
 
 .team-item {
+    height: 368px;
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -409,6 +413,8 @@ li {
 }
 
 .team-title {
+    align-content: center;
+    justify-content: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
@@ -470,6 +476,12 @@ li {
     font-size: 16px;
     line-height: 1.9;
     color: var(--title-text-color)
+}
+
+.team-list {
+    max-width: 270px;
+    padding-bottom: 94px;
+    gap: 30px;
 }
 
 /* Футер сайта */
