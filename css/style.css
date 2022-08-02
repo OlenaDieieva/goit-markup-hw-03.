@@ -227,12 +227,10 @@ li {
 }
 
 /* Фильтр работ */
-.galery .container {
-    display: flex;
-    align-items: center;
-}
+.galery .container {}
 
 .button {
+    gap: 8px;
     color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
     border-radius: 4px;
@@ -260,9 +258,12 @@ li {
     background-color: var(--accent-color);
 }
 
-.btn-group .button {
+.btn-group {
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
     cursor: pointer;
     font-family: inherit;
     font-weight: 500;
@@ -349,11 +350,7 @@ li {
 }
 
 /* Наша команда */
-.section.work .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+.section.work .container {}
 
 .work-list {
     display: flex;
@@ -390,7 +387,7 @@ li {
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
-    margin-left: auto;
+    justify-content: center;
     margin-right: auto;
     margin-bottom: 50px;
     color: var(--primary-text-color);
