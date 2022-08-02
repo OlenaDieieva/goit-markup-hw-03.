@@ -66,13 +66,15 @@ a {
     width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Логотип */
 .header {
     padding-top: 24px;
     padding-bottom: 24px;
+    border-bottom: 1px solid #ECECEC;
 }
 
 header.container {
@@ -140,28 +142,21 @@ li {
     color: var(--accent-color);
 }
 
-.contact list {}
-
-ul.contact.list {
+.contact {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
-}
+    margin-left: auto;
+    margin-right: auto;
 
-.contact.list .email {
-    width: 135px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-}
-
-.contact.list .tel {
-    width: 135px;
-    padding-top: 32px;
-    padding-bottom: 32px;
 }
 
 .email {
+    display: block;
+    width: 135px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -170,6 +165,11 @@ ul.contact.list {
 }
 
 .tel {
+    display: block;
+    width: 135px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 49px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -327,6 +327,7 @@ ul.contact.list {
     text-align: center;
     text-transform: uppercase;
     margin-top: 0px;
+    margin-bottom: 10px;
     color: var(--primary-text-color);
 }
 
@@ -473,10 +474,9 @@ ul.contact.list {
 
 /* Футер сайта */
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
     margin-bottom: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background: var(--primary-background-color);
 }
 
