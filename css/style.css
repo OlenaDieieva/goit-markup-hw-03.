@@ -16,16 +16,6 @@
     --secondary-background-color: #F5F4FA;
 }
 
-.html {
-    box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-}
-
 body {
     font-size: 14px;
     font-family: 'Roboto', sans-serif;
@@ -83,10 +73,14 @@ header.container {
     justify-content: space-between;
 }
 
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
 .logo {
@@ -105,15 +99,10 @@ header.container {
     color: var(--accent-color);
 }
 
-li {
-    outline: 1px solid red;
-}
-
 .link.current {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-right: 50px;
     outline: 1px, solid, red;
     color: var(--accent-color);
 }
@@ -145,11 +134,8 @@ li {
 .contact {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 50px;
     margin-left: auto;
-    margin-right: auto;
-
 }
 
 .email {
@@ -166,10 +152,8 @@ li {
 
 .tel {
     display: block;
-    width: 135px;
     padding-top: 32px;
     padding-bottom: 32px;
-    margin-left: 49px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -214,9 +198,7 @@ li {
     align-items: center;
     text-align: center;
     letter-spacing: 0.06em;
-    border-radius: 4px;
-    padding: 10px 32px;
-    margin-top: 35px;
+    padding: 10px 22px;
     margin-bottom: 0px;
     margin-left: auto;
     margin-right: auto;
@@ -227,15 +209,13 @@ li {
 }
 
 /* Фильтр работ */
-.galery .container {}
 
 .button {
     gap: 8px;
+    border: none;
     color: var(--primary-text-color);
     background-color: var(--secondary-background-color);
-    border-radius: 4px;
     padding: 6px 22px;
-
 }
 
 .button.primary {
@@ -247,8 +227,10 @@ li {
     font-size: 16px;
     line-height: 1.6;
     text-align: center;
-    min-width: 73px;
+    border-radius: 4px;
     margin-left: 0px;
+    min-width: 73px;
+    color: var(--white);
     background-color: var(--accent-color);
 }
 
@@ -298,6 +280,11 @@ li {
     justify-content: space-between;
 }
 
+section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -315,8 +302,6 @@ li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 94px;
-    padding-bottom: 94px;
     gap: 30px;
 }
 
@@ -350,7 +335,6 @@ li {
 }
 
 /* Наша команда */
-.section.work .container {}
 
 .work-list {
     display: flex;
@@ -361,7 +345,7 @@ li {
 
 .section.work {
     margin-top: 0px;
-    margin-bottom: 94px;
+    padding-bottom: 94px;
 }
 
 .section-team {
@@ -371,8 +355,7 @@ li {
 }
 
 .section-title {
-    padding-top: 94px;
-    padding-bottom: 49px;
+    margin-bottom: 49px;
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -393,6 +376,13 @@ li {
     color: var(--primary-text-color);
 }
 
+.team {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
 .team-list {
     display: flex;
     align-items: center;
@@ -400,16 +390,12 @@ li {
 }
 
 .team-item {
-    height: 368px;
-    flex-wrap: wrap;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 270px;
     background-color: var(--white);
 }
 
 .team-title {
+    margin-bottom: 10px;
     align-content: center;
     justify-content: center;
     font-weight: 500;
@@ -420,6 +406,10 @@ li {
 }
 
 /* Галерея */
+.galery {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 .galery.container {
     width: 1200px;
@@ -442,6 +432,7 @@ li {
 }
 
 .galery-title {
+    margin-bottom: 4px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2.0;
@@ -449,10 +440,15 @@ li {
     color: var(--primary-text-color);
 }
 
+.galery-example {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
 .galery-item {
     width: 370px;
-    margin-right: 30px;
-    margin-bottom: 30px;
 }
 
 .galery-item:nth-child(3) {
@@ -465,7 +461,8 @@ li {
 
 .galery-list {
     display: flex;
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .example-work {
@@ -489,8 +486,14 @@ li {
     background: var(--primary-background-color);
 }
 
-.footer .logo {
-    font-family: 'Raleway';
+.footer .logo-footer {
+    display: inline-block;
+    margin-bottom: 20px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
     font-weight: 700;
     font-size: 26px;
     line-height: 1.19;
@@ -505,6 +508,12 @@ li {
 
 .adress {
     font-style: normal;
+}
+
+.adress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
 }
 
 .adress-item {
